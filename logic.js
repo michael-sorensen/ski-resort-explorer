@@ -32603,7 +32603,7 @@ function weatherAPI() {
     const settings = {
     "async": true,
     "crossDomain": true,
-    "url": `http://api.weatherapi.com/v1/forecast.json?key=2bcd9e5d13204726acf52726212010&q=${resort.lat},${resort.lng}&days=1&aqi=no&alerts=no`,
+    "url": `https://api.weatherapi.com/v1/forecast.json?key=2bcd9e5d13204726acf52726212010&q=${resort.lat},${resort.lng}&days=1&aqi=no&alerts=no`,
     "method": "GET"
     };
 
@@ -32618,7 +32618,6 @@ function weatherAPI() {
     resort.tomTemp = forecast['avgtemp_f'],
     resort.tomWeather = forecast['condition']['text'],
     resort.tomSnow = forecast['daily_chance_of_snow'],
-    console.log(forecast)
   })
 })};
 
