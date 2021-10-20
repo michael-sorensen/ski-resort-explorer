@@ -32596,6 +32596,36 @@ resorts = [{'name': 'Alyeska Resort',
 'trailMap_image': 'https://s3.onthesnow.com/images/trailmaps/wyoming/white-pine-ski-area/20130727202905/xlarge.jpg'}]
 
 
+
+// Weather API call
+function weatherAPI() {
+  resorts.forEach(function(resort) {  
+    const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": `http://api.weatherapi.com/v1/forecast.json?key=2bcd9e5d13204726acf52726212010&q=${resort.lat},${resort.lng}&days=1&aqi=no&alerts=no`,
+    "method": "GET"
+    };
+
+
+  $.ajax(settings).done(function(response) {
+    base = response.current
+    forecast = response.forecast.forecastday[0]['day']
+    resort.CurrentTemp = base['temp_f'],
+    resort.CurrentWeather = base['condition']['text'],
+    resort.CurrentSnow = base['precip_in'],
+    resort.CurrentWind = base['wind_mph'],
+    resort.tomTemp = forecast['avgtemp_f'],
+    resort.tomWeather = forecast['condition']['text'],
+    resort.tomSnow = forecast['daily_chance_of_snow'],
+    console.log(forecast)
+  })
+})};
+
+resorts.forEach(function(resort){
+  var x = (resort.CurrentTemp === 'undefined') ? "--" : x;
+  });
+
 // Create large resort icon
 var lgResortIcon = L.icon({
   iconUrl: 'images/MapMTN.png',
@@ -32604,7 +32634,7 @@ var lgResortIcon = L.icon({
   ico0chor:   [0 , 0], // point of the icon which will correspond to marker's location
   //shadowAnchor: [4, 62],  // the same for the shadow
   popupAnchor:  [15, 0] // point from which the popup should open relative to the ico0chor
-});
+}); 
 
 // Create small resort icon
 var smResortIcon = L.icon({
@@ -32686,41 +32716,61 @@ lgResorts.forEach(
             <a href="${resort.trailMap_image}" data-toggle="lightbox">
             <img src="${resort.trailMap_image}" class="modal-img img-fluid"></a>
         </div>
+        <div class="container-fluid">
         <div class="row">
-        <div class="col-xs-12">
-            <div class="banner">
-            <h2 class="banner-text">ELEVATION</h2></div>
-        </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">Summit</h5>
-                <img class="card-icon" src="images/summit.svg">
-                <h5 class="card-data">${(resort.elevation_summit*3.28084).toFixed()}'</h5>
-                </div>
-                </div>
+        <h3 class="weather-banner">Live Weather</h3>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title-weather">Temperature</h5>
+            <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
             </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">Vertical Drop</h5>
-                <img class="card-icon" src="images/drop_dark.svg">
-                <h5 class="card-data">${(resort.vertical_drop*3.28084).toFixed()}'</h5>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">Base</h5>
-                <img class="card-icon" src="images/base.svg">
-                <h5 class="card-data">${(resort.elevation_base*3.28084).toFixed()}'</h5>
-                </div>
-                </div>
             </div>
         </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title-weather">Weather</h5>
+            <h5 class="card-data-weather">${resort.CurrentWeather || "--"}</h5>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title-weather">Snowfall</h5>
+            <h5 class="card-data-weather">${resort.CurrentSnow || "0"}"</h5>
+            </div>
+            </div>
+        </div>
+
+        <h3 class="weather-banner">Tomorrow's Forecast</h3>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title-weather">Temperature</h5>
+            <h5 class="card-data-weather">${resort.tomTemp || "--"}°</h5>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title-weather">Weather</h5>
+            <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title-weather">% Snow</h5>
+            <h5 class="card-data-weather">${resort.tomSnow || "0"}%</h5>
+            </div>
+            </div>
+        </div>
+    </div>
+
         <div class="row">
         <div class="col-xs-12">
         <div class="card-description" style="background: linear-gradient(60deg, #0F3557,#0F3557, #519EE1);">
@@ -32771,10 +32821,40 @@ lgResorts.forEach(
                 </div>
             </div>
       </div>
+      
     <br>
     <div class="row">
         <a href="${resort.image_url}" data-toggle="lightbox">
         <img src="${resort.image_url}" class="modal-img img-fluid"></a>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Summit</h5>
+            <img class="card-icon" src="images/summit.svg">
+            <h5 class="card-data">${(resort.elevation_summit*3.28084).toFixed()}'</h5>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Vertical Drop</h5>
+            <img class="card-icon" src="images/drop_dark.svg">
+            <h5 class="card-data">${(resort.vertical_drop*3.28084).toFixed()}'</h5>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Base</h5>
+            <img class="card-icon" src="images/base.svg">
+            <h5 class="card-data">${(resort.elevation_base*3.28084).toFixed()}'</h5>
+            </div>
+            </div>
+        </div>
     </div>
     <div class="row">
     <div class="col-xs-12">

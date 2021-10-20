@@ -67,7 +67,19 @@ hr.light{
 .dark-bg{
   background: linear-gradient(to top, #fff,#C9E1F7);  padding:20px;
 }
+.col-dark{
+  background-color:#0d365a;
+  padding:10px;
+  margin-bottom:15px;
+}
 
+.weather-button{
+  margin-left:20px;
+  background-color: white;
+  color: #0d365a;
+  font-size:18px;
+  padding:5px;  
+}
 /* LEAFLET CONTROLS ----------------------------- */
 .leaflet-control-layers{
   background-color:#0F3557;
@@ -188,6 +200,19 @@ h2.banner-text{
   background-clip: content-box;
 }
 
+h3.weather-banner{
+  color:#0d365a;
+  text-transform: uppercase;
+  letter-spacing: 1.4;
+  font-size: 22px;
+  font-weight:800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 /* CARDS ----------------------------- */
 .card{
@@ -200,7 +225,24 @@ h2.banner-text{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   margin-bottom:20px;
+}
 
+.card-white{
+  width:100%;
+  background: radial-gradient(#fff,#fff,#fff,#CFD7DE);
+  border: 1.5px solid #0d365a;
+  filter: drop-shadow(-2px 3.5px 2px gray);
+  margin-bottom:15px;
+  padding:0px;
+}
+
+.card-dark{
+  width:100%;
+  background-color:#0d365a;
+  border: 1.5px solid #0d365a;
+  filter: drop-shadow(-2px 3.5px 2px gray);
+  margin-bottom:15px;
+  padding:0px;
 }
 
 .card-header{
@@ -238,6 +280,16 @@ h5.card-title{
   letter-spacing: .06em;
 }
 
+h5.card-title-weather{
+  color:black;
+  text-align: center;
+  letter-spacing: 1.4;
+  font-size: 7px;
+  font-weight:600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
 h5.card-data{
   color:black;
   text-align: center;
@@ -268,22 +320,14 @@ h5.card-data-lift{
   letter-spacing: .06em;
 }
 
-.card-white{
-  width:100%;
-  background: radial-gradient(#fff,#fff,#fff,#CFD7DE);
-  border: 1.5px solid #0d365a;
-  filter: drop-shadow(-2px 3.5px 2px gray);
-  margin-bottom:15px;
-  padding:0px;
-}
-
-.card-dark{
-  width:100%;
-  background-color:#0d365a;
-  border: 1.5px solid #0d365a;
-  filter: drop-shadow(-2px 3.5px 2px gray);
-  margin-bottom:15px;
-  padding:0px;
+h5.card-data-weather{
+  color:black;
+  text-align: center;
+  letter-spacing: 1.4;
+  font-size: 14px;
+  font-weight:600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
 }
 
 .card-description{
@@ -296,16 +340,6 @@ h5.card-data-lift{
   padding-top:6px !important;
   font-size:14px;
   margin:0px;
-}
-
-.card-blue h5.card-title-small{
-  color:white;
-  text-align: center;
-  letter-spacing: 1.4;
-  font-size: 10px;
-  font-weight:600;
-  text-transform: uppercase;
-  letter-spacing: .06em;
 }
 
 .card-icon{
