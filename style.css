@@ -13,6 +13,9 @@ body {
   height: 100%;
 }
 
+.leaflet-top .leaflet-left{
+  padding:100px;
+}
 
 /* MODAL FORMATTING ----------------------------- */
 .modal-header{
@@ -39,7 +42,6 @@ h4#feature-title.modal-title.text-primary{
   margin-right: auto;
   filter: drop-shadow(-4px 6px 3px gray);
   margin-bottom:20px;
-
 }
 
 button.close {
@@ -48,6 +50,23 @@ button.close {
   color:white;
   margin-right:30px;
   opacity:1;
+}
+
+button.btn-default{
+  font-family:'Barlow', sans-serif;
+  font-weight: 500;
+  background-color:rgba(0,0,0,0.0);
+
+  color:white;
+  border:2px solid white;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+button.btn-default:hover{
+  background-color:#0d365a;
+  color:white;
+  border:2px solid white;
 }
 
 
@@ -62,11 +81,9 @@ hr{
 hr.light{
   background-color:white;
   height:1.5px;
+  padding:0px;
 }
 
-.dark-bg{
-  background: linear-gradient(to top, #fff,#C9E1F7);  padding:20px;
-}
 .col-dark{
   background-color:#0d365a;
   padding:10px;
@@ -77,20 +94,26 @@ hr.light{
   margin-left:20px;
   background-color: white;
   color: #0d365a;
-  font-size:18px;
-  padding:5px;  
+  font-size:16px;
+  padding:5px 8px 5px 8px;
+  border-radius: 7px;  
 }
+
 /* LEAFLET CONTROLS ----------------------------- */
 .leaflet-control-layers{
-  background-color:#0F3557;
-  border:3px solid white;
-  filter: drop-shadow(-2px 3.5px 2px gray);
+  background-color:rgba(0, 0, 0, .8);
+  border:2px solid white;
+  filter: drop-shadow(-2px 3.5px 2px black);
   color:white;
   font-family:'Barlow', sans-serif;
   font-size:13.5px;
-  font-weight:200;
+  font-weight:300;
+  letter-spacing:.02em;
   text-transform: uppercase;
+  padding:10px;
+  text-align: left;
 }
+
 
 
 /* FONTS ----------------------------- */
@@ -136,6 +159,31 @@ h2.section{
   font-weight:medium;
   letter-spacing: 1.4;
   font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+h2.section2{
+  color:white;
+  text-transform: uppercase;
+  font-weight:medium;
+  letter-spacing: 1.4;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+h6.card-miles{
+  color:black;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight:200;
+  letter-spacing: 1.4;
+  text-align: center;
+  font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .06em;
@@ -190,8 +238,12 @@ p.copyright{
 
 h2.banner-text{
   text-align: center;
-  color: #000000;
-  font-size: 28px;
+  color:#0d365a;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight:800;
+  letter-spacing: .06em;
+  font-size: 31px;
   background-color: #ffffff;
   margin-left: 32%;
   margin-right: 32%;
@@ -200,18 +252,25 @@ h2.banner-text{
   background-clip: content-box;
 }
 
+h3.weather-banner::before{
+  border-top:2px solid black;
+  width:100%;
+}
 h3.weather-banner{
   color:#0d365a;
   text-transform: uppercase;
   letter-spacing: 1.4;
   font-size: 22px;
-  font-weight:800;
-  text-transform: uppercase;
+  font-weight:500;
   letter-spacing: .06em;
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.p{
+  font-size:18px;
 }
 
 /* CARDS ----------------------------- */
@@ -225,15 +284,7 @@ h3.weather-banner{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   margin-bottom:20px;
-}
-
-.card-white{
-  width:100%;
-  background: radial-gradient(#fff,#fff,#fff,#CFD7DE);
-  border: 1.5px solid #0d365a;
-  filter: drop-shadow(-2px 3.5px 2px gray);
-  margin-bottom:15px;
-  padding:0px;
+  transition: all .6s ease;
 }
 
 .card-dark{
@@ -243,7 +294,10 @@ h3.weather-banner{
   filter: drop-shadow(-2px 3.5px 2px gray);
   margin-bottom:15px;
   padding:0px;
+  transition: all .6s ease;
 }
+
+
 
 .card-header{
   background-color:#0d365a;
@@ -257,7 +311,7 @@ h3.weather-banner{
   height:30px;
 }
 
-.card-header-lifts{
+.card-header-dark{
   background-color:#0d365a;
   color:white;
   border-bottom: 2px solid white;
@@ -284,7 +338,7 @@ h5.card-title-weather{
   color:black;
   text-align: center;
   letter-spacing: 1.4;
-  font-size: 7px;
+  font-size: 12px;
   font-weight:600;
   text-transform: uppercase;
   letter-spacing: .06em;
@@ -321,10 +375,10 @@ h5.card-data-lift{
 }
 
 h5.card-data-weather{
-  color:black;
+  color:white;
   text-align: center;
   letter-spacing: 1.4;
-  font-size: 14px;
+  font-size: 17px;
   font-weight:600;
   text-transform: uppercase;
   letter-spacing: .06em;
@@ -332,7 +386,7 @@ h5.card-data-weather{
 
 .card-description{
   width:100%;
-  background-color:#0d365a;
+  background: linear-gradient(160deg, #0F3557,#0F3557, #519EE1);
   color:white;
   text-align: justify;
   filter: drop-shadow(-2px 3.5px 2px gray);
@@ -350,5 +404,25 @@ h5.card-data-weather{
   margin-left: auto;
   margin-right: auto;
 }
+
+
+p.overview{
+font-size:15px;
+line-height: 1.65em;
+}
+
+.modal-footer{
+  background: linear-gradient(60deg, #0F3557,#0F3557, #519EE1);
+}
+
+.modal {
+  border-radius: 0;
+}
+
+.leaflet-control-zoom{
+  display: inline-block;
+  font-family:'Barlow', sans-serif;
+}
+
 
 
