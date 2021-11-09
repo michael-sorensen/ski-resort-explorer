@@ -8,7 +8,7 @@ html *{font-family:'Barlow', sans-serif;}
 	float:right;
 	background:rgba(0, 0, 0, .8);
 	color:#0d365a;
-	border: 2px solid white;
+	border: 1.5px solid white;
 	background-clip: padding-box;
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
@@ -16,12 +16,13 @@ html *{font-family:'Barlow', sans-serif;}
 	background-color: rgba(0,0,0,0);
 	filter: drop-shadow(-2px 3px 3px black);
 	z-index:1000;	
-	margin-left: 10px;
+	margin-left: 15px;
 	margin-top: 10px;
 }
 .leaflet-control-search.search-exp {/*expanded*/
 	background-color: rgba(0,0,0,.8);
 	border: 2px solid white;
+	width:160px;
 	background-clip: padding-box;	
 	-moz-border-radius: 7px;
 	-webkit-border-radius: 7px;
@@ -34,13 +35,13 @@ html *{font-family:'Barlow', sans-serif;}
 	display:inline;
 	float:left;
 	background: rgba(255, 255, 255, .8);
-	border:1.2px solid white;
+	border:2px solid white;
 	border-radius:2px;
 	height:auto;
-	font-size:14px;
+	font-size:16px;
 	font-weight:600;
 	color:black;
-	padding:4px 7px 4px 10px;
+	padding:1px 7px 1px 10px;
 	margin:8px 10px 8px 6px;
 	border-radius: 6px;
 }
@@ -81,7 +82,7 @@ html *{font-family:'Barlow', sans-serif;}
 	height:25px;
 	background: url('../images/search-icon.svg') no-repeat rgba(0, 0, 0, 0);
 	background-size: contain;
-	margin:5px;
+	margin:0px;
 	padding:10px;
 	border-radius:4px;
 }

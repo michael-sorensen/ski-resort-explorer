@@ -92,16 +92,21 @@ hr.light{
 
 .weather-button{
   margin-left:20px;
-  background-color: white;
-  color: #0d365a;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
   font-size:16px;
   padding:5px 8px 5px 8px;
-  border-radius: 7px;  
+  border-radius: 7px;
+  border:2px solid white;
 }
+
+.weather-button:hover{
+  background-color: rgba(0, 0, 0, 0);}
 
 /* LEAFLET CONTROLS ----------------------------- */
 .leaflet-control-layers{
   background-color:rgba(0, 0, 0, .8);
+  width:160px;
   border:2px solid white;
   filter: drop-shadow(-2px 3.5px 2px black);
   color:white;
@@ -194,7 +199,7 @@ h6.card-miles{
 
 /* TOP PAGE BANNER ----------------------------- */
 .header{
-  background: linear-gradient(160deg, #0F3557,#0F3557,#0F3557, #519EE1);
+  background: linear-gradient(60deg, #0F3557, #519EE1);
   color:white;
   text-transform: uppercase;
   font-weight:medium;
@@ -234,6 +239,14 @@ p.copyright{
     background-color: rgba(0,0,0,0.0);
     background-image: repeating-linear-gradient(-45deg,transparent,transparent 3px, #0d365aff 3px,#0d365aff 7px);
     background-size: contain;
+}
+
+@media only screen and (max-width: 1100px) {
+  .banner {
+display:none;
+  }
+
+
 }
 
 h2.banner-text{
@@ -424,5 +437,7 @@ line-height: 1.65em;
   font-family:'Barlow', sans-serif;
 }
 
-
+.leaflet-control-zoom-in{
+  background-color: rgba(0, 0, 0, .8);
+}
 

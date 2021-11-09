@@ -6978,7 +6978,7 @@ resorts = [
   {
     "name":"Javalambre",
     "description":"The ski resort Javalambre has all the necessary amenities to make your ski day a memorable day. Just an hour away and located in the middle of the cities of Valencia and Zaragoza, the area opened in the year 1995/96 in order to give all friends of skiing in the province of Teruel a possibility to exercise your sport.  The investments and improvements in the accessibility and the technical facilities contributed significantly to the increase in visitors from the regions of Valencia, Catalonia and Aragon. Also there are modern snow production systems. The area Aramon Javalambre - Valdelinares stands for quality in terms of services, so that winter sports enthusiasts can enjoy a few unforgettable days.", 
-    "image_url":"https://www.turismodearagon.com/wp-content/uploads/2018/12/Estaci%C3%B3n-de-esqu%C3%AD-de-Javalambre-3.jpg?w=1920&sh=oPngjcnzlw48U-N0sSmt0Q",
+    "image_url":"",
     "city":"44459 Camarena de la Sierra - Teruel, Aragon",
     "lat":"40.127966",
     "lng":"-1.013145",
@@ -56309,7 +56309,6 @@ smResortsAsia.forEach(
 var layers = {
   smResortLayer: new L.LayerGroup(smMarkers),
   lgResortLayer: new L.LayerGroup(lgMarkers),
-  snowLayer: new L.LayerGroup(),
 };
 
 // Create the map with our layers
@@ -56320,18 +56319,17 @@ var map = L.map("map", {
   layers: [
     layers.smResortLayer,
     layers.lgResortLayer,
-    layers.snowLayer,
   ]
 });
 
 // Add our 'lightmap' tile layer to the map
 customMap.addTo(map);
+snowLayer.addTo(map);
 
 // Create an overlays object to add to the layer control
 var overlays = {
   "Large Resorts": layers.lgResortLayer,
   "Small Resorts": layers.smResortLayer,
-  "Snow Radar": layers.snowLayer
 };
 
 	function localData(text, callResponse)
@@ -56349,17 +56347,15 @@ var overlays = {
 
 	map.addControl( new L.Control.Search({
     sourceData: localData, 
-    text:'Search', 
+    text:'Search...',
+    hideMarkerOnCollapse:true,
     propertyName:'name', 
     propertyLoc:['lat','lng'], 
     zoom:12,
-    hideMarkerOnCollapse:true,
-    // collapsed:false, //
+    position:'topright',
+    
+    collapsed:false,
     autoCollapse:true,
     markerLocation:true}) );
 
-    L.control.layers(null, overlays, {collapsed:false}).addTo(map)
-
-    L.control.zoom({
-        position: 'topleft'
-    }).addTo(map);
+    L.control.layers(null, overlays, {collapsed:false}).addTo(map);
