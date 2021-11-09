@@ -13,14 +13,10 @@ body {
   height: 100%;
 }
 
-.leaflet-top .leaflet-left{
-  padding:100px;
-}
-
 /* MODAL FORMATTING ----------------------------- */
 
 .modal-dialog{
-  width:52%;
+  width:60%;
 }
 
 
@@ -30,6 +26,11 @@ body {
   }
 }
 
+@media only screen and (max-width: 768px){
+  .modal-dialog{
+    width:80%;
+  }
+}
 
 .modal-header{
   background: linear-gradient(60deg, #0F3557,#0F3557, #519EE1);
@@ -119,7 +120,6 @@ hr.light{
 /* LEAFLET CONTROLS ----------------------------- */
 .leaflet-control-layers{
   background-color:rgba(0, 0, 0, .8);
-  width:160px;
   border:2px solid white;
   filter: drop-shadow(-2px 3.5px 2px black);
   color:white;
@@ -131,7 +131,6 @@ hr.light{
   padding:10px;
   text-align: left;
 }
-
 
 
 /* FONTS ----------------------------- */
