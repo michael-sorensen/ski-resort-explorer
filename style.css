@@ -18,6 +18,19 @@ body {
 }
 
 /* MODAL FORMATTING ----------------------------- */
+
+.modal-dialog{
+  width:52%;
+}
+
+
+@media only screen and (max-width: 992px){
+  .modal-dialog{
+    width:70%;
+  }
+}
+
+
 .modal-header{
   background: linear-gradient(60deg, #0F3557,#0F3557, #519EE1);
 }
@@ -245,8 +258,13 @@ p.copyright{
   .banner {
 display:none;
   }
+  
+}
 
-
+@media only screen and (min-width: 1100px) {
+  h2.banner-text-sm {
+display:none;
+  }
 }
 
 h2.banner-text{
@@ -265,10 +283,18 @@ h2.banner-text{
   background-clip: content-box;
 }
 
-h3.weather-banner::before{
-  border-top:2px solid black;
-  width:100%;
+h2.banner-text-sm{
+  background: linear-gradient(150deg, #519EE1,#0F3557,#0F3557, #0F3557, #519EE1);
+  text-align: center;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight:800;
+  letter-spacing: .06em;
+  font-size: 24px;
+  padding:10px;
 }
+
 h3.weather-banner{
   color:#0d365a;
   text-transform: uppercase;
@@ -337,6 +363,17 @@ h3.weather-banner{
   width:100%;
 }
 
+.card-header-weather{
+  color:black;
+  text-align: center;
+  letter-spacing: 1.4;
+  font-size: 14px;
+  font-weight:600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding-top:8px;
+}
+
 h5.card-title{
   color:black;
   text-align: center;
@@ -388,7 +425,7 @@ h5.card-data-lift{
 }
 
 h5.card-data-weather{
-  color:white;
+  color:black;
   text-align: center;
   letter-spacing: 1.4;
   font-size: 17px;

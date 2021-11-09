@@ -55418,29 +55418,30 @@ lgResorts.forEach(
         <div class="row">
         <div class="col-xs-12">
             <div class="banner">
-            <h2 class="banner-text">WEATHER</h2></div>
+              <h2 class="banner-text">WEATHER</h2></div>
+            <h2 class="banner-text-sm">WEATHER</h2>
         </div>
         </div>
         <div class="row">
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
+            <div class="card">
+            <div class="card-header-weather">Weather</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentWeather || "--"}</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Snowfall</div>
+        <div class="col-md-4 col-sm-6">
+        <div class="card">
+        <div class="card-header-weather">Temperature</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
+        </div>
+        </div>
+      </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Snowfall</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentSnow || "0"}"</h5>
             </div>
@@ -55449,31 +55450,30 @@ lgResorts.forEach(
 
         <h3 class="weather-banner">Tomorrow's Forecast</h3>
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
+        <div class="card">
+        <div class="card-header-weather">Weather</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Temperature</div>
             <div class="card-body"> 
             <h5 class="card-data-weather">${resort.tomTemp || "--"}°</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">% Snow</div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">% Snow</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.tomSnow || "0"}%</h5>
             </div>
             </div>
         </div>
     </div>
-
         <div class="row">
         <div class="col-xs-12">
         <div class="card-description">
@@ -55483,7 +55483,8 @@ lgResorts.forEach(
         <div class="row">
             <div class="col-xs-12">
                 <div class="banner">
-                <h2 class="banner-text">TERRAIN</h2></div>
+                        <h2 class="banner-text">TERRAIN</h2></div>
+                <h2 class="banner-text-sm">TERRAIN</h2>
             </div>
             </div>
         <div class="row">
@@ -55560,7 +55561,8 @@ lgResorts.forEach(
     <div class="row">
     <div class="col-xs-12">
         <div class="banner">
-        <h2 class="banner-text">LIFTS</h2></div>
+                <h2 class="banner-text">LIFTS</h2></div>
+        <h2 class="banner-text-sm">LIFTS</h2>
     </div>
     </div>
 
@@ -55663,29 +55665,30 @@ smResorts.forEach(
         <div class="row">
         <div class="col-xs-12">
             <div class="banner">
-            <h2 class="banner-text">WEATHER</h2></div>
+              <h2 class="banner-text">WEATHER</h2></div>
+            <h2 class="banner-text-sm">WEATHER</h2>
         </div>
         </div>
         <div class="row">
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
+            <div class="card">
+            <div class="card-header-weather">Weather</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentWeather || "--"}</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Snowfall</div>
+        <div class="col-md-4 col-sm-6">
+        <div class="card">
+        <div class="card-header-weather">Temperature</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
+        </div>
+        </div>
+      </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Snowfall</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentSnow || "0"}"</h5>
             </div>
@@ -55694,32 +55697,31 @@ smResorts.forEach(
 
         <h3 class="weather-banner">Tomorrow's Forecast</h3>
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
+        <div class="card">
+        <div class="card-header-weather">Weather</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Temperature</div>
             <div class="card-body"> 
             <h5 class="card-data-weather">${resort.tomTemp || "--"}°</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">% Snow</div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">% Snow</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.tomSnow || "0"}%</h5>
             </div>
             </div>
         </div>
     </div>
-
-        <div class="row">
+      <div class="row">
         <div class="col-xs-12">
         <div class="card-description">
         <h2 class="section">About ${resort.name}</h2>
@@ -55728,7 +55730,8 @@ smResorts.forEach(
         <div class="row">
             <div class="col-xs-12">
                 <div class="banner">
-                <h2 class="banner-text">TERRAIN</h2></div>
+                        <h2 class="banner-text">TERRAIN</h2></div>
+        <h2 class="banner-text-sm">TERRAIN</h2>
             </div>
             </div>
         <div class="row">
@@ -55805,7 +55808,8 @@ smResorts.forEach(
     <div class="row">
     <div class="col-xs-12">
         <div class="banner">
-        <h2 class="banner-text">LIFTS</h2></div>
+                <h2 class="banner-text">LIFTS</h2></div>
+        <h2 class="banner-text-sm">LIFTS</h2>
     </div>
     </div>
 
@@ -55920,29 +55924,30 @@ lgResortsAsia.forEach(
         <div class="row">
         <div class="col-xs-12">
             <div class="banner">
-            <h2 class="banner-text">WEATHER</h2></div>
+              <h2 class="banner-text">WEATHER</h2></div>
+            <h2 class="banner-text-sm">WEATHER</h2>
         </div>
         </div>
         <div class="row">
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
+            <div class="card">
+            <div class="card-header-weather">Weather</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentWeather || "--"}</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Snowfall</div>
+        <div class="col-md-4 col-sm-6">
+        <div class="card">
+        <div class="card-header-weather">Temperature</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
+        </div>
+        </div>
+      </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Snowfall</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentSnow || "0"}"</h5>
             </div>
@@ -55951,33 +55956,32 @@ lgResortsAsia.forEach(
 
         <h3 class="weather-banner">Tomorrow's Forecast</h3>
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
+        <div class="card">
+        <div class="card-header-weather">Weather</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Temperature</div>
             <div class="card-body"> 
             <h5 class="card-data-weather">${resort.tomTemp || "--"}°</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">% Snow</div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">% Snow</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.tomSnow || "0"}%</h5>
             </div>
             </div>
         </div>
     </div>
-
-        <div class="row">
-        <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
         <div class="card-description">
         <h2 class="section2">About ${resort.name}</h2>
         <hr class="light">
@@ -55985,7 +55989,8 @@ lgResortsAsia.forEach(
         <div class="row">
             <div class="col-xs-12">
                 <div class="banner">
-                <h2 class="banner-text">TERRAIN</h2></div>
+                        <h2 class="banner-text">TERRAIN</h2></div>
+        <h2 class="banner-text-sm">TERRAIN</h2>
             </div>
             </div>
         <div class="row">
@@ -56052,7 +56057,8 @@ lgResortsAsia.forEach(
     <div class="row">
     <div class="col-xs-12">
         <div class="banner">
-        <h2 class="banner-text">LIFTS</h2></div>
+                <h2 class="banner-text">LIFTS</h2></div>
+        <h2 class="banner-text-sm">LIFTS</h2>
     </div>
     </div>
 <div class="row">
@@ -56115,36 +56121,36 @@ smResortsAsia.forEach(
         <div class="modal-body" id="feature-info">
         <div class="container-fluid">
         <div class="row">
-            <a href="${resort.trailMap_image}" data-toggle="lightbox">
             <img src="${resort.trailMap_image}" class="modal-img img-fluid"></a>
         </div>
         <div class="container-fluid">
         <div class="row">
         <div class="col-xs-12">
             <div class="banner">
-            <h2 class="banner-text">WEATHER</h2></div>
+              <h2 class="banner-text">WEATHER</h2></div>
+            <h2 class="banner-text-sm">WEATHER</h2>
         </div>
         </div>
         <div class="row">
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
+            <div class="card">
+            <div class="card-header-weather">Weather</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentWeather || "--"}</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Snowfall</div>
+        <div class="col-md-4 col-sm-6">
+        <div class="card">
+        <div class="card-header-weather">Temperature</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.CurrentTemp || "--"}°</h5>
+        </div>
+        </div>
+      </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Snowfall</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.CurrentSnow || "0"}"</h5>
             </div>
@@ -56153,24 +56159,24 @@ smResortsAsia.forEach(
 
         <h3 class="weather-banner">Tomorrow's Forecast</h3>
         <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Temperature</div>
+        <div class="card">
+        <div class="card-header-weather">Weather</div>
+        <div class="card-body">
+        <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
+        </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">Temperature</div>
             <div class="card-body"> 
             <h5 class="card-data-weather">${resort.tomTemp || "--"}°</h5>
             </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">Weather</div>
-            <div class="card-body">
-            <h5 class="card-data-weather">${resort.tomWeather || "--"}</h5>
-            </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <div class="card-dark">
-            <div class="card-header-dark">% Snow</div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+            <div class="card-header-weather">% Snow</div>
             <div class="card-body">
             <h5 class="card-data-weather">${resort.tomSnow || "0"}%</h5>
             </div>
@@ -56187,7 +56193,8 @@ smResortsAsia.forEach(
         <div class="row">
             <div class="col-xs-12">
                 <div class="banner">
-                <h2 class="banner-text">TERRAIN</h2></div>
+                        <h2 class="banner-text">TERRAIN</h2></div>
+        <h2 class="banner-text-sm">TERRAIN</h2>
             </div>
             </div>
         <div class="row">
@@ -56254,7 +56261,8 @@ smResortsAsia.forEach(
     <div class="row">
     <div class="col-xs-12">
         <div class="banner">
-        <h2 class="banner-text">LIFTS</h2></div>
+            <h2 class="banner-text">LIFTS</h2></div>
+        <h2 class="banner-text-sm">LIFTS</h2>
     </div>
     </div>
 <div class="row">
