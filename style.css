@@ -19,19 +19,6 @@ body {
   width:60%;
 }
 
-
-@media only screen and (max-width: 992px){
-  .modal-dialog{
-    width:70%;
-  }
-}
-
-@media only screen and (max-width: 768px){
-  .modal-dialog{
-    width:80%;
-  }
-}
-
 .modal-header{
   background: linear-gradient(60deg, #0F3557,#0F3557, #519EE1);
 }
@@ -58,6 +45,11 @@ h4#feature-title.modal-title.text-primary{
   margin-bottom:20px;
 }
 
+.modal-footer{
+  background: linear-gradient(60deg, #0F3557,#0F3557, #519EE1);
+}
+
+/* MODAL CLOSE BUTTONS */
 button.close {
   font-size: 35px;
   font-weight:300;
@@ -83,6 +75,18 @@ button.btn-default:hover{
   border:2px solid white;
 }
 
+@media only screen and (max-width: 992px){
+  .modal-dialog{
+    width:70%;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .modal-dialog{
+    width:80%;
+  }
+}
+
 
 /* MISC ----------------------------- */
 hr{
@@ -98,24 +102,9 @@ hr.light{
   padding:0px;
 }
 
-.col-dark{
-  background-color:#0d365a;
-  padding:10px;
-  margin-bottom:15px;
-}
 
-.weather-button{
-  margin-left:20px;
-  background-color: rgba(0, 0, 0, .8);
-  color: white;
-  font-size:16px;
-  padding:5px 8px 5px 8px;
-  border-radius: 7px;
-  border:2px solid white;
-}
 
-.weather-button:hover{
-  background-color: rgba(0, 0, 0, 0);}
+
 
 /* LEAFLET CONTROLS ----------------------------- */
 .leaflet-control-layers{
@@ -134,6 +123,42 @@ hr.light{
 
 
 /* FONTS ----------------------------- */
+h2.section{
+  color:white;
+  text-transform: uppercase;
+  font-weight:medium;
+  letter-spacing: 1.4;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+h2.section2{
+  color:white;
+  text-transform: uppercase;
+  font-weight:medium;
+  letter-spacing: 1.4;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+h3.weather-banner{
+  color:#0d365a;
+  text-transform: uppercase;
+  letter-spacing: 1.4;
+  font-size: 22px;
+  font-weight:500;
+  letter-spacing: .06em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 h3.data{
   text-align: center;
   color:#0d365a;
@@ -170,29 +195,6 @@ p.subtitle{
   letter-spacing: .06em;
 }
 
-h2.section{
-  color:white;
-  text-transform: uppercase;
-  font-weight:medium;
-  letter-spacing: 1.4;
-  font-size: 20px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-h2.section2{
-  color:white;
-  text-transform: uppercase;
-  font-weight:medium;
-  letter-spacing: 1.4;
-  text-align: left;
-  font-size: 20px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
 h6.card-miles{
   color:black;
   text-transform: uppercase;
@@ -204,6 +206,15 @@ h6.card-miles{
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .06em;
+}
+
+p.overview{
+  font-size:15px;
+  line-height: 1.65em;
+}
+  
+.p{
+  font-size:18px;
 }
 
 
@@ -236,11 +247,24 @@ p.copyright{
   padding-top:10px;
 }
 
+.weather-button{
+  margin-left:20px;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  font-size:16px;
+  padding:5px 8px 5px 8px;
+  border-radius: 7px;
+  border:2px solid white;
+}
+
+.weather-button:hover{
+  background-color: rgba(0, 0, 0, 0);
+}
+
 
 
 
 /* SECTION DIVIDERS/BANNER ----------------------------- */
-
 .banner {
     width: 100%;
     height: auto;
@@ -251,19 +275,6 @@ p.copyright{
     background-color: rgba(0,0,0,0.0);
     background-image: repeating-linear-gradient(-45deg,transparent,transparent 3px, #0d365aff 3px,#0d365aff 7px);
     background-size: contain;
-}
-
-@media only screen and (max-width: 1100px) {
-  .banner {
-display:none;
-  }
-  
-}
-
-@media only screen and (min-width: 1100px) {
-  h2.banner-text-sm {
-display:none;
-  }
 }
 
 h2.banner-text{
@@ -294,22 +305,20 @@ h2.banner-text-sm{
   padding:10px;
 }
 
-h3.weather-banner{
-  color:#0d365a;
-  text-transform: uppercase;
-  letter-spacing: 1.4;
-  font-size: 22px;
-  font-weight:500;
-  letter-spacing: .06em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+@media only screen and (max-width: 1100px) {
+  .banner {
+display:none;
+  }
+  
 }
 
-.p{
-  font-size:18px;
+@media only screen and (min-width: 1100px) {
+  h2.banner-text-sm {
+display:none;
+  }
 }
+
+
 
 /* CARDS ----------------------------- */
 .card{
@@ -334,8 +343,6 @@ h3.weather-banner{
   padding:0px;
   transition: all .6s ease;
 }
-
-
 
 .card-header{
   background-color:#0d365a;
@@ -455,25 +462,8 @@ h5.card-data-weather{
 }
 
 
-p.overview{
-font-size:15px;
-line-height: 1.65em;
-}
 
-.modal-footer{
-  background: linear-gradient(60deg, #0F3557,#0F3557, #519EE1);
-}
 
-.modal {
-  border-radius: 0;
-}
 
-.leaflet-control-zoom{
-  display: inline-block;
-  font-family:'Barlow', sans-serif;
-}
 
-.leaflet-control-zoom-in{
-  background-color: rgba(0, 0, 0, .8);
-}
 

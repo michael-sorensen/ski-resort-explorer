@@ -58713,8 +58713,9 @@ lgResorts.forEach(
 
         <div class="modal-body" id="feature-info">
         <div class="container-fluid">
+        
         <div class="row">
-            <img src="${resort.trailMap_image}" class="modal-img img-fluid"></a>
+                <img src="${resort.trailMap_image}" class="modal-img img-fluid">
         </div>
         <div class="container-fluid">
         <div class="row">
