@@ -183,16 +183,18 @@ h1.bubble {
     font-weight: 300;
     letter-spacing: .02em;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 7px 13px 7px 13px;
     text-align: left;
+    border-radius: 0 !important;
 }
 
-.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control.leaflet-drag-target {
-    margin-right: 20px;
+.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control {
+    margin-right: 30px !important;
+    border-radius: 0 !important;
 }
 
 .leaflet-control-zoom.leaflet-bar.leaflet-control {
-    margin: 15px;
+    margin-left: 40px;
 }
 
 
@@ -304,14 +306,12 @@ p.overview {
     animation: gradient-animation 18s ease infinite;
     color: white;
     text-transform: uppercase;
-    font-weight: medium;
-    letter-spacing: 1.4;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: .06em;
     width: 100%;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 30px 12px 50px;
+    align-items: center;
 }
 
 .main-icon {
@@ -334,9 +334,12 @@ p.copyright {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     padding: 5px 8px 5px 8px;
-    border-radius: 7px;
     border: 2px solid #fff;
-    display: inline;
+    display: inline-block;
+    margin: auto;
+    margin-left: 20px !important;
+    bottom: 0%;
+    vertical-align: middle;
 }
 
 .weather-button:hover {
