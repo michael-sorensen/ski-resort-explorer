@@ -175,7 +175,7 @@ h1.bubble {
 
 .leaflet-control-layers {
     background-color: rgba(0, 0, 0, .8);
-    border: 2px solid #fff;
+    border: 2px solid #fff !important;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.25), 0 15px 12px rgba(0, 0, 0, 0.2);
     color: white;
     font-family: 'Barlow', sans-serif;
@@ -185,6 +185,14 @@ h1.bubble {
     text-transform: uppercase;
     padding: 10px;
     text-align: left;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded.leaflet-control.leaflet-drag-target {
+    margin-right: 20px;
+}
+
+.leaflet-control-zoom.leaflet-bar.leaflet-control {
+    margin: 15px;
 }
 
 

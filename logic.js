@@ -1076,10 +1076,14 @@ map.addControl(new L.Control.Search({
     propertyLoc: ['lat', 'lng'],
     zoom: 12,
     position: 'topleft',
-
     collapsed: false,
     autoCollapse: true,
     markerLocation: true
 }));
+
+L.control.zoom({
+    position: 'topleft',
+    margin: 20
+}).addTo(map);
 
 L.control.layers(null, overlays, { collapsed: false }).addTo(map);
