@@ -79,14 +79,14 @@ smResorts = [];
 
 // Populate array of large resorts
 resorts.forEach(function(resort) {
-    if (resort.acres_total >= 600) {
+    if (resort.runs_total >= 70) {
         lgResorts.push(resort);
     }
 });
 
 // Populate array of small resorts
 resorts.forEach(function(resort) {
-    if (resort.acres_total < 600 || resort.acres_total == null) {
+    if (resort.runs_total < 70 || resort.runs_total == null) {
         smResorts.push(resort);
     }
 });
@@ -101,8 +101,23 @@ lgResorts.forEach(
                 click: function(e) {
                     $("#feature-title").html(`${resort.name}`);
                     $("#feature-info").html(`
+                    <script>
+                    $('.video-hide').each(function() {
+                        if ($(this).find('lite-youtube').attr('videoid') == "null") {
+                            $(this).css('display', 'none');
+                        }
+                    });
+                </script>
+                <script>
+                $('.img-hide').each(function() {
+                  if ($(this).find('img').attr('src') == 'null'){
+                      $(this).css('display', 'none');
+                      $(this).css('display', 'none');
+                    }
+                    });
+              </script>
                   <div class="container-fluid">
-                  <div class="row-fluid">
+                  <div class="row-fluid img-hide">
                   <img src="${resort.trailMap_image}" class="modal-img">
                     </div>
                   </div>
@@ -193,17 +208,19 @@ lgResorts.forEach(
                         </div>
                       </div>
                     </div>
+                    <div class="row-fluid video-hide">
+                    <lite-youtube style="border:5px solid #fff; box-shadow: 0 19px 38px rgba(0, 0, 0, 0.25), 0 15px 12px rgba(0, 0, 0, 0.2);" videoid="${resort.video_url}"></lite-youtube>
+                  </div>
                     <div class="row" id="desc">
                       <div class="col-xs-12">
-                        <div class="card-description">
+                        <div class="card-description card-hide">
+                        <div class="img-hide">
+                        <img src="${resort.image_url}" class="mask-fade">
+                        </div>
                           <h2 class="section">About ${resort.name}</h2>
-                          <hr class="light">
                           <p class="overview" id="poverview">${resort.description||''}</p>
                         </div>
                       </div>
-                    </div>
-                    <div class="row-fluid">
-                      <img src="${resort.image_url}" class="modal-img">
                     </div>
                     <div class="row">
                       <div class="col-xs-12">
@@ -602,7 +619,7 @@ asiaResorts.forEach(function(resort) {
 
 // Populate array of small resorts
 asiaResorts.forEach(function(resort) {
-    if (resort.total_runs < 18 || resort.runs_total == null) {
+    if (resort.total_runs < 18 || resort.total_runs == null) {
         smResortsAsia.push(resort);
     };
 });
@@ -617,6 +634,13 @@ lgResortsAsia.forEach(
                 click: function(e) {
                     $("#feature-title").html(`${resort.name}`);
                     $("#feature-info").html(`
+                    <script>
+                    $('.image-hide').each(function() {
+                        if ($(this).find('img').attr('src') == "0") {
+                            $(this).css('display', 'none');
+                        }
+                    });
+                </script>
                   <div class="container-fluid">
                   <div class="row-fluid">
                       <img src="${resort.trailMap_image}" class="modal-img">
@@ -709,6 +733,9 @@ lgResortsAsia.forEach(
                         </div>
                       </div>
                     </div>
+                    <div class="row-fluid image-hide">
+                    <img src="${resort.image_url}" class="modal-img">
+                  </div>
                     <div class="row">
                       <div class="col-xs-12">
                         <div class="section-header text-center">
